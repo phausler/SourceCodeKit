@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BDED1E316AB949B004FFC71 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDED1E216AB949B004FFC71 /* Cocoa.framework */; };
+		5BDED1ED16AB949B004FFC71 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BDED1EB16AB949B004FFC71 /* InfoPlist.strings */; };
+		5BDED20F16AB94EF004FFC71 /* SCKClangSourceFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED1FE16AB94EF004FFC71 /* SCKClangSourceFile.h */; };
+		5BDED21016AB94EF004FFC71 /* SCKClangSourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED1FF16AB94EF004FFC71 /* SCKClangSourceFile.m */; };
+		5BDED21116AB94EF004FFC71 /* SCKCodeCompletionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20016AB94EF004FFC71 /* SCKCodeCompletionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21216AB94EF004FFC71 /* SCKCodeCompletionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20116AB94EF004FFC71 /* SCKCodeCompletionResult.m */; };
+		5BDED21316AB94EF004FFC71 /* SCKIntrospection.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20216AB94EF004FFC71 /* SCKIntrospection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21416AB94EF004FFC71 /* SCKIntrospection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20316AB94EF004FFC71 /* SCKIntrospection.m */; };
+		5BDED21516AB94EF004FFC71 /* SCKProject.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20416AB94EF004FFC71 /* SCKProject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21616AB94EF004FFC71 /* SCKProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20516AB94EF004FFC71 /* SCKProject.m */; };
+		5BDED21716AB94EF004FFC71 /* SCKSourceCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20616AB94EF004FFC71 /* SCKSourceCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21816AB94EF004FFC71 /* SCKSourceCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20716AB94EF004FFC71 /* SCKSourceCollection.m */; };
+		5BDED21916AB94EF004FFC71 /* SCKSourceFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20816AB94EF004FFC71 /* SCKSourceFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21A16AB94EF004FFC71 /* SCKSourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20916AB94EF004FFC71 /* SCKSourceFile.m */; };
+		5BDED21B16AB94EF004FFC71 /* SCKSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20A16AB94EF004FFC71 /* SCKSyntaxHighlighter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21C16AB94EF004FFC71 /* SCKSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20B16AB94EF004FFC71 /* SCKSyntaxHighlighter.m */; };
+		5BDED21D16AB94EF004FFC71 /* SCKTextTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20C16AB94EF004FFC71 /* SCKTextTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED21E16AB94EF004FFC71 /* SCKTextTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BDED20D16AB94EF004FFC71 /* SCKTextTypes.m */; };
+		5BDED21F16AB94EF004FFC71 /* SourceCodeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDED20E16AB94EF004FFC71 /* SourceCodeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BDED22516AB9F1C004FFC71 /* libclang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDED22416AB9F1B004FFC71 /* libclang.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BDED1DF16AB949B004FFC71 /* SourceCodeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SourceCodeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDED1E216AB949B004FFC71 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5BDED1E516AB949B004FFC71 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5BDED1E616AB949B004FFC71 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5BDED1E716AB949B004FFC71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BDED1EA16AB949B004FFC71 /* SourceCodeKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SourceCodeKit-Info.plist"; sourceTree = "<group>"; };
+		5BDED1EC16AB949B004FFC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BDED1EE16AB949B004FFC71 /* SourceCodeKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SourceCodeKit-Prefix.pch"; sourceTree = "<group>"; };
+		5BDED1FE16AB94EF004FFC71 /* SCKClangSourceFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKClangSourceFile.h; sourceTree = "<group>"; };
+		5BDED1FF16AB94EF004FFC71 /* SCKClangSourceFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKClangSourceFile.m; sourceTree = "<group>"; };
+		5BDED20016AB94EF004FFC71 /* SCKCodeCompletionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKCodeCompletionResult.h; sourceTree = "<group>"; };
+		5BDED20116AB94EF004FFC71 /* SCKCodeCompletionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKCodeCompletionResult.m; sourceTree = "<group>"; };
+		5BDED20216AB94EF004FFC71 /* SCKIntrospection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKIntrospection.h; sourceTree = "<group>"; };
+		5BDED20316AB94EF004FFC71 /* SCKIntrospection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKIntrospection.m; sourceTree = "<group>"; };
+		5BDED20416AB94EF004FFC71 /* SCKProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKProject.h; sourceTree = "<group>"; };
+		5BDED20516AB94EF004FFC71 /* SCKProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKProject.m; sourceTree = "<group>"; };
+		5BDED20616AB94EF004FFC71 /* SCKSourceCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKSourceCollection.h; sourceTree = "<group>"; };
+		5BDED20716AB94EF004FFC71 /* SCKSourceCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKSourceCollection.m; sourceTree = "<group>"; };
+		5BDED20816AB94EF004FFC71 /* SCKSourceFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKSourceFile.h; sourceTree = "<group>"; };
+		5BDED20916AB94EF004FFC71 /* SCKSourceFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKSourceFile.m; sourceTree = "<group>"; };
+		5BDED20A16AB94EF004FFC71 /* SCKSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKSyntaxHighlighter.h; sourceTree = "<group>"; };
+		5BDED20B16AB94EF004FFC71 /* SCKSyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKSyntaxHighlighter.m; sourceTree = "<group>"; };
+		5BDED20C16AB94EF004FFC71 /* SCKTextTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCKTextTypes.h; sourceTree = "<group>"; };
+		5BDED20D16AB94EF004FFC71 /* SCKTextTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCKTextTypes.m; sourceTree = "<group>"; };
+		5BDED20E16AB94EF004FFC71 /* SourceCodeKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCodeKit.h; sourceTree = "<group>"; };
+		5BDED22416AB9F1B004FFC71 /* libclang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libclang.a; path = lib/libclang.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BDED1DB16AB949A004FFC71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDED22516AB9F1C004FFC71 /* libclang.a in Frameworks */,
+				5BDED1E316AB949B004FFC71 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BDED1D316AB949A004FFC71 = {
+			isa = PBXGroup;
+			children = (
+				5BDED1E816AB949B004FFC71 /* SourceCodeKit */,
+				5BDED1E116AB949B004FFC71 /* Frameworks */,
+				5BDED1E016AB949B004FFC71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BDED1E016AB949B004FFC71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BDED1DF16AB949B004FFC71 /* SourceCodeKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BDED1E116AB949B004FFC71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDED22416AB9F1B004FFC71 /* libclang.a */,
+				5BDED1E216AB949B004FFC71 /* Cocoa.framework */,
+				5BDED1E416AB949B004FFC71 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BDED1E416AB949B004FFC71 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BDED1E516AB949B004FFC71 /* AppKit.framework */,
+				5BDED1E616AB949B004FFC71 /* CoreData.framework */,
+				5BDED1E716AB949B004FFC71 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5BDED1E816AB949B004FFC71 /* SourceCodeKit */ = {
+			isa = PBXGroup;
+			children = (
+				5BDED1FE16AB94EF004FFC71 /* SCKClangSourceFile.h */,
+				5BDED1FF16AB94EF004FFC71 /* SCKClangSourceFile.m */,
+				5BDED20016AB94EF004FFC71 /* SCKCodeCompletionResult.h */,
+				5BDED20116AB94EF004FFC71 /* SCKCodeCompletionResult.m */,
+				5BDED20216AB94EF004FFC71 /* SCKIntrospection.h */,
+				5BDED20316AB94EF004FFC71 /* SCKIntrospection.m */,
+				5BDED20416AB94EF004FFC71 /* SCKProject.h */,
+				5BDED20516AB94EF004FFC71 /* SCKProject.m */,
+				5BDED20616AB94EF004FFC71 /* SCKSourceCollection.h */,
+				5BDED20716AB94EF004FFC71 /* SCKSourceCollection.m */,
+				5BDED20816AB94EF004FFC71 /* SCKSourceFile.h */,
+				5BDED20916AB94EF004FFC71 /* SCKSourceFile.m */,
+				5BDED20A16AB94EF004FFC71 /* SCKSyntaxHighlighter.h */,
+				5BDED20B16AB94EF004FFC71 /* SCKSyntaxHighlighter.m */,
+				5BDED20C16AB94EF004FFC71 /* SCKTextTypes.h */,
+				5BDED20D16AB94EF004FFC71 /* SCKTextTypes.m */,
+				5BDED20E16AB94EF004FFC71 /* SourceCodeKit.h */,
+				5BDED1E916AB949B004FFC71 /* Supporting Files */,
+			);
+			path = SourceCodeKit;
+			sourceTree = "<group>";
+		};
+		5BDED1E916AB949B004FFC71 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BDED1EA16AB949B004FFC71 /* SourceCodeKit-Info.plist */,
+				5BDED1EB16AB949B004FFC71 /* InfoPlist.strings */,
+				5BDED1EE16AB949B004FFC71 /* SourceCodeKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5BDED1DC16AB949A004FFC71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDED20F16AB94EF004FFC71 /* SCKClangSourceFile.h in Headers */,
+				5BDED21116AB94EF004FFC71 /* SCKCodeCompletionResult.h in Headers */,
+				5BDED21316AB94EF004FFC71 /* SCKIntrospection.h in Headers */,
+				5BDED21516AB94EF004FFC71 /* SCKProject.h in Headers */,
+				5BDED21716AB94EF004FFC71 /* SCKSourceCollection.h in Headers */,
+				5BDED21916AB94EF004FFC71 /* SCKSourceFile.h in Headers */,
+				5BDED21B16AB94EF004FFC71 /* SCKSyntaxHighlighter.h in Headers */,
+				5BDED21D16AB94EF004FFC71 /* SCKTextTypes.h in Headers */,
+				5BDED21F16AB94EF004FFC71 /* SourceCodeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5BDED1DE16AB949A004FFC71 /* SourceCodeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDED1F416AB949B004FFC71 /* Build configuration list for PBXNativeTarget "SourceCodeKit" */;
+			buildPhases = (
+				5BDED1DA16AB949A004FFC71 /* Sources */,
+				5BDED1DB16AB949A004FFC71 /* Frameworks */,
+				5BDED1DC16AB949A004FFC71 /* Headers */,
+				5BDED1DD16AB949A004FFC71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SourceCodeKit;
+			productName = SourceCodeKit;
+			productReference = 5BDED1DF16AB949B004FFC71 /* SourceCodeKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BDED1D516AB949A004FFC71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Étoile";
+			};
+			buildConfigurationList = 5BDED1D816AB949A004FFC71 /* Build configuration list for PBXProject "SourceCodeKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5BDED1D316AB949A004FFC71;
+			productRefGroup = 5BDED1E016AB949B004FFC71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BDED1DE16AB949A004FFC71 /* SourceCodeKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BDED1DD16AB949A004FFC71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDED1ED16AB949B004FFC71 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BDED1DA16AB949A004FFC71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDED21016AB94EF004FFC71 /* SCKClangSourceFile.m in Sources */,
+				5BDED21216AB94EF004FFC71 /* SCKCodeCompletionResult.m in Sources */,
+				5BDED21416AB94EF004FFC71 /* SCKIntrospection.m in Sources */,
+				5BDED21616AB94EF004FFC71 /* SCKProject.m in Sources */,
+				5BDED21816AB94EF004FFC71 /* SCKSourceCollection.m in Sources */,
+				5BDED21A16AB94EF004FFC71 /* SCKSourceFile.m in Sources */,
+				5BDED21C16AB94EF004FFC71 /* SCKSyntaxHighlighter.m in Sources */,
+				5BDED21E16AB94EF004FFC71 /* SCKTextTypes.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5BDED1EB16AB949B004FFC71 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BDED1EC16AB949B004FFC71 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BDED1F216AB949B004FFC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5BDED1F316AB949B004FFC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/include\"";
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5BDED1F516AB949B004FFC71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SourceCodeKit/SourceCodeKit-Prefix.pch";
+				INFOPLIST_FILE = "SourceCodeKit/SourceCodeKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		5BDED1F616AB949B004FFC71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SourceCodeKit/SourceCodeKit-Prefix.pch";
+				INFOPLIST_FILE = "SourceCodeKit/SourceCodeKit-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/lib\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BDED1D816AB949A004FFC71 /* Build configuration list for PBXProject "SourceCodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDED1F216AB949B004FFC71 /* Debug */,
+				5BDED1F316AB949B004FFC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDED1F416AB949B004FFC71 /* Build configuration list for PBXNativeTarget "SourceCodeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDED1F516AB949B004FFC71 /* Debug */,
+				5BDED1F616AB949B004FFC71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BDED1D516AB949A004FFC71 /* Project object */;
+}
