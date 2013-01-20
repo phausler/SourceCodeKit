@@ -61,7 +61,7 @@
 @property (nonatomic, readonly, retain) NSMutableDictionary *categories;
 @property (nonatomic, readonly, retain) NSMutableDictionary *methods;
 @property (nonatomic, readonly, retain) NSMutableArray *ivars;
-- (id) initWithClass: (Class)cls;
+- (id)initWithClass:(Class)cls;
 @end
 
 @interface SCKCategory : SCKProgramComponent

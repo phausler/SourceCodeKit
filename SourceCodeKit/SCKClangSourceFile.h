@@ -11,15 +11,6 @@
  * [Objective-]C[++] files.
  */
 @interface SCKClangSourceFile : SCKSourceFile
-{
-	/** Compiler arguments */
-	NSMutableArray *args;
-	/** Index shared between code files */
-	SCKClangIndex *idx;
-	/** libclang translation unit handle. */
-	CXTranslationUnit translationUnit;
-	CXFile file;
-}
 @property (nonatomic, readonly) NSMutableDictionary *classes;
 @property (nonatomic, readonly) NSMutableDictionary *functions;
 @property (nonatomic, readonly) NSMutableDictionary *globals;

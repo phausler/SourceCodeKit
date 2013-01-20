@@ -7,64 +7,68 @@
  */
 static NSDictionary *fileClasses;
 
-@interface SCKClangIndex : NSObject @end
+@interface SCKClangIndex : NSObject
+@end
 
 @implementation SCKSourceCollection
+
 @synthesize bundles;
+
 + (void)initialize
 {
 	Class clang = NSClassFromString(@"SCKClangSourceFile");
-	fileClasses = @{@"m":clang,
+	fileClasses = @{@"m": clang,
                     @"cc": clang,
                     @"c": clang,
                     @"h": clang,
-                    @"cpp":clang};
+                    @"cpp": clang};
 }
+
 - (id)init
 {
 	self = [super init];
 	indexes = [NSMutableDictionary new];
 	// A single clang index instance for all of the clang-supported file types
 	id index = [SCKClangIndex new];
-	[indexes setObject: index forKey: @"m"];
-	[indexes setObject: index forKey: @"c"];
-	[indexes setObject: index forKey: @"h"];
-	[indexes setObject: index forKey: @"cpp"];
-	[indexes setObject: index forKey: @"cc"];
+	[indexes setObject:index forKey:@"m"];
+	[indexes setObject:index forKey:@"c"];
+	[indexes setObject:index forKey:@"h"];
+	[indexes setObject:index forKey:@"cpp"];
+	[indexes setObject:index forKey:@"cc"];
 	files = [NSMutableDictionary new];
 	bundles = [NSMutableDictionary new];
 	bundleClasses = [NSMutableDictionary new];
 	int count = objc_getClassList(NULL, 0);
 	Class *classList = (__unsafe_unretained Class *)calloc(sizeof(Class), count);
 	objc_getClassList(classList, count);
-	for (int i=0 ; i<count ; i++)
+	for (int i = 0 ; i < count; i++)
 	{
-		SCKClass *cls = [[SCKClass alloc] initWithClass: classList[i]];
-		[bundleClasses setObject: cls forKey: [cls name]];
-		NSBundle *b = [NSBundle bundleForClass: classList[i]];
+		SCKClass *cls = [[SCKClass alloc] initWithClass:classList[i]];
+		[bundleClasses setObject:cls forKey:[cls name]];
+		NSBundle *b = [NSBundle bundleForClass:classList[i]];
 		if (nil == b)
 		{
 			continue;
 		}
-		SCKBundle *bundle = [bundles objectForKey: [b bundlePath]];
+		SCKBundle *bundle = [bundles objectForKey:[b bundlePath]];
 		if (nil  == bundle)
 		{
 			bundle = [SCKBundle new];
 			bundle.name = [b bundlePath];
-			[bundles setObject: bundle forKey: [b bundlePath]];
+			[bundles setObject:bundle forKey:[b bundlePath]];
 		}
-		[bundle.classes addObject: cls];
+		[bundle.classes addObject:cls];
 	}
 	free(classList);
 	return self;
 }
 
-- (NSMutableDictionary*)programComponentsFromFilesForKey: (NSString*)key
+- (NSMutableDictionary*)programComponentsFromFilesForKey:(NSString *)key
 {
 	NSMutableDictionary *components = [NSMutableDictionary new];
 	for (SCKSourceFile *file in [files objectEnumerator])
 	{
-		[components addEntriesFromDictionary: [file valueForKey: key]];
+		[components addEntriesFromDictionary:[file valueForKey:key]];
 	}
 	return components;
 }
@@ -96,28 +100,29 @@ static NSDictionary *fileClasses;
 	return [self programComponentsFromFilesForKey: @"globals"];
 }
 
-- (SCKIndex*)indexForFileExtension: (NSString*)extension
+- (SCKIndex*)indexForFileExtension:(NSString *)extension
 {
-	return [indexes objectForKey: extension];
+	return [indexes objectForKey:extension];
 }
-- (SCKSourceFile*)sourceFileForPath: (NSString*)aPath
+
+- (SCKSourceFile*)sourceFileForPath:(NSString *)aPath
 {
 	NSString *path = [aPath stringByStandardizingPath];
 
-	SCKSourceFile *file = [files objectForKey: path];
+	SCKSourceFile *file = [files objectForKey:path];
 	if (nil != file)
 	{
 		return file;
 	}
 
 	NSString *extension = [path pathExtension];
-	file = [[fileClasses objectForKey: extension] fileUsingIndex: [indexes objectForKey: extension]];
+	file = [[fileClasses objectForKey:extension] fileUsingIndex: [indexes objectForKey:extension]];
 	file.fileName = path;
 	file.collection = self;
 	[file reparse];
 	if (nil != file)
 	{
-		[files setObject: file forKey: path];
+		[files setObject:file forKey:path];
 	}
 	else
 	{
@@ -125,4 +130,5 @@ static NSDictionary *fileClasses;
 	}
 	return file;
 }
+
 @end
