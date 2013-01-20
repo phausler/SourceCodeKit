@@ -36,6 +36,7 @@ static void freestring(CXString *str)
 @implementation SCKSourceLocation
 
 @synthesize file;
+@synthesize offset;
 
 - (id)initWithClangSourceLocation: (CXSourceLocation)l
 {
@@ -55,6 +56,31 @@ static void freestring(CXString *str)
 - (NSString*)description
 {
 	return [NSString stringWithFormat: @"%@:%d", file, (int)offset];
+}
+
+- (NSUInteger)hash
+{
+    return [file hash] ^ offset;
+}
+
+- (BOOL)isEqual:(id)object
+{
+    if (object == self)
+    {
+        return YES;
+    }
+    
+    if (![object isKindOfClass:[SCKSourceLocation class]])
+    {
+        return NO;
+    }
+    
+    if ([file isEqualToString:[(SCKSourceLocation *)object file]] && offset == [(SCKSourceLocation *)object offset])
+    {
+        return YES;
+    }
+    
+    return NO;
 }
 
 @end

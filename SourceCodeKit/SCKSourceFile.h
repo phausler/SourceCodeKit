@@ -80,5 +80,6 @@
 	NSString *file;
 	NSUInteger offset;
 }
-@property (retain, nonatomic) NSString *file; 
+@property (nonatomic, readonly) NSString *file;
+@property (nonatomic, readonly) NSUInteger offset;
 @end
