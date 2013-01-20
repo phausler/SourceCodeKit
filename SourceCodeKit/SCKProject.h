@@ -39,6 +39,8 @@
  */
 @property (nonatomic, readonly) NSArray *fileURLs;
 
+@property (nonatomic, readonly) SCKSourceCollection *sourceCollection;
+
 /**
  * Adds the file that corresponds to the URL to the project.
  *

@@ -11,8 +11,22 @@
 }
 
 @synthesize directoryURL, fileURLs;
+@synthesize sourceCollection;
 
-- (id) initWithDirectoryURL: (NSURL *)aURL 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        directoryURL = nil;
+        sourceCollection = [[SCKSourceCollection alloc] init];
+        fileURLs = [[NSMutableArray alloc] init];
+        projectContent = [[SCKFileBrowsingProjectContent alloc] init];
+    }
+    return self;
+}
+
+- (id) initWithDirectoryURL: (NSURL *)aURL
            sourceCollection: (SCKSourceCollection *)aSourceCollection;
 {
 	NSAssert(aSourceCollection != nil, @"Collection must not be nil");
